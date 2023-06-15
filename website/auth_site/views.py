@@ -1,11 +1,10 @@
 from django.shortcuts import render
+from .models import Task
 
-# Create your views here.
-from django.http import HttpResponse
 from django.shortcuts import render
 def index(request):
-
-    return render(request, 'auth_site/index.html')
+    tasks = Task.objects.order_by('id')
+    return render(request, 'auth_site/index.html', {'title': 'main site', 'tasks': tasks})
 
 def about(request):
     return render(request, 'auth_site/about.html')
