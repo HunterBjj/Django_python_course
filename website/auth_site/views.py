@@ -8,6 +8,5 @@ def index(request):
     return render(request, 'auth_site/index.html')
 
 def about(request):
-
     return render(request, 'auth_site/about.html')
 
