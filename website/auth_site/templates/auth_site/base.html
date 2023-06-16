@@ -164,10 +164,13 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link active" aria-current="page" href=" ">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'about' %}">О сайте</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -180,21 +183,4 @@
 </header>
 
 
- <br>
-  {% block title %}
-  {{title}}
-  {% endblock %}
-    <h1>Список задач</h1>
-    {% if tasks %}
-  {% for el in tasks %}
-
-    <div class="alert alert-warning mt-2">
-      <h3>{{el.title}}</h3>
-      <p>{{el.task}}</p>
-    </div>
-    {% endfor %}
-  {% else %}
-    <p>Нет задач</p>
-  {% endif %}
-  </body>
-</html>
+{ % block title %} {% endblock %}
