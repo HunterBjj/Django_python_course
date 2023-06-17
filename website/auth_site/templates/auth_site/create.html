@@ -181,7 +181,7 @@
     </div>
   </nav>
 </header>
-  <head>
+
     <br>
 <br>
 {% block content %}
@@ -190,9 +190,9 @@
         {% csrf_token %}
         {{ form.title }}<br>
         {{form.task}}<br>
-        <button type="submit" class="btm btn-success">Ввести</button>
+        <button type="submit" class="btn btn-success">Ввести</button>
         <span>{{  error  }}</span>
     </form>
 {% endblock %}
-    </head>
+
 
